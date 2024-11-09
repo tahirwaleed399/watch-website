@@ -1,0 +1,269 @@
+/* Main CSS File - styles.css */
+
+/*--------------------------------
+  1. RESET & BASE STYLES 
+---------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+html {
+  font-family: "Playfair Display", serif;
+}
+
+/*--------------------------------
+  2. NAVIGATION STYLES
+---------------------------------*/
+nav {
+  background: #1a1a1a;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #c9a959;
+}
+
+/*--------------------------------
+  3. HEADER & BANNER STYLES
+---------------------------------*/
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #c9a959;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: black;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.7);
+  z-index: -1;
+}
+
+.banner__header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.banner__title {
+  font-size: 4rem;
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Arial", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.banner__subtitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Arial", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/*--------------------------------
+  4. MAIN CONTENT STYLES
+---------------------------------*/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.featured {
+  margin: 2rem 0;
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+}
+
+/*--------------------------------
+  5. WATCH CARD STYLES
+---------------------------------*/
+.watch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.watch-card {
+  flex: 0 1 300px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.watch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.watch-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+}
+
+.watch-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.watch-card p {
+  font-size: 1.25rem;
+  color: #c9a959;
+  font-weight: bold;
+}
+
+/*--------------------------------
+  6. CONTACT FORM STYLES
+---------------------------------*/
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-form button {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #c9a959;
+}
+
+/*--------------------------------
+  7. FOOTER STYLES
+---------------------------------*/
+footer {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/*--------------------------------
+  8. RESPONSIVE STYLES
+---------------------------------*/
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .watch-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .watch-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .banner__title {
+    font-size: 1rem;
+  }
+}
