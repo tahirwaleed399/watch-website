@@ -4,25 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vintage Watch Collection</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style></style>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer 
+    src="./js/script.js"></script>
   </head>
   <body>
     <nav>
       <div class="logo">Timeless</div>
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
-        <a href="products.html">Collection</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </nav>
 
-    <div class="banner">
+    <div class="banner" id="banner">
       <header class="banner__header">
         <h1 class="banner__title">Vintage Watch Collection</h1>
         <p class="banner__subtitle">Timeless Elegance, Classic Design</p>
@@ -32,138 +28,34 @@
     <main>
       <section class="featured">
         <h2>Featured Timepieces</h2>
-        <div class="watch-grid">
-          <div class="watch-card">
-            <div class="watch-image">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="90"
-                  fill="#f8f8f8"
-                  stroke="#333"
-                  stroke-width="4"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="85"
-                  fill="none"
-                  stroke="#666"
-                  stroke-width="2"
-                />
-                <circle cx="100" cy="100" r="5" fill="#333" />
-                <line
-                  x1="100"
-                  y1="25"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="3"
-                  transform="rotate(45 100 100)"
-                />
-                <line
-                  x1="100"
-                  y1="40"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="2"
-                  transform="rotate(125 100 100)"
-                />
-              </svg>
-            </div>
-            <h3>Classic Chronograph</h3>
-            <p>$299</p>
-          </div>
-          <div class="watch-card">
-            <div class="watch-image">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  x="50"
-                  y="40"
-                  width="100"
-                  height="120"
-                  rx="10"
-                  fill="#f0f0f0"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="40"
-                  fill="none"
-                  stroke="#333"
-                  stroke-width="2"
-                />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="35"
-                  fill="none"
-                  stroke="#666"
-                  stroke-width="1"
-                />
-                <circle cx="100" cy="100" r="3" fill="#333" />
-                <line
-                  x1="100"
-                  y1="65"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="2"
-                  transform="rotate(30 100 100)"
-                />
-                <line
-                  x1="100"
-                  y1="70"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="1"
-                  transform="rotate(150 100 100)"
-                />
-              </svg>
-            </div>
-            <h3>Vintage Square</h3>
-            <p>$399</p>
-          </div>
-          <div class="watch-card">
-            <div class="watch-image">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="#f5f5f5" />
-                <circle
-                  cx="100"
-                  cy="100"
-                  r="75"
-                  fill="none"
-                  stroke="#333"
-                  stroke-width="2"
-                />
-                <circle cx="100" cy="100" r="4" fill="#333" />
-                <line
-                  x1="100"
-                  y1="30"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="2"
-                  transform="rotate(60 100 100)"
-                />
-                <line
-                  x1="100"
-                  y1="35"
-                  x2="100"
-                  y2="100"
-                  stroke="#333"
-                  stroke-width="1"
-                  transform="rotate(180 100 100)"
-                />
-              </svg>
-            </div>
-            <h3>Minimalist Series</h3>
-            <p>$259</p>
-          </div>
-        </div>
+<div class="watch-grid">
+  <div class="watch-card">
+    <div class="watch-image">
+      <img src="https://luxurywatchesusa.com/wp-content/uploads/2019/09/50535-0002-280x280.jpg.webp" alt="Classic Watch" width="200" height="200">
+    </div>
+    <h3>Classic Chronograph</h3>
+    <p>$299</p>
+    <button onclick="addToCart('Classic Chronograph', 299)" class="buy-button">Add to Cart</button>
+  </div>
+  
+  <div class="watch-card">
+    <div class="watch-image">
+      <img src="https://luxurywatchesusa.com/wp-content/uploads/2019/08/126710blnr-0002-280x280.jpg" alt="Square Watch" width="200" height="200">
+    </div>
+    <h3>Vintage Square</h3>
+    <p>$399</p>
+    <button onclick="addToCart('Vintage Square', 399)" class="buy-button">Add to Cart</button>
+  </div>
+  
+  <div class="watch-card">
+    <div class="watch-image">
+      <img src="https://luxurywatchesusa.com/wp-content/uploads/2023/07/rolex-52508-0006-white-dial-280x280.jpg.webp" alt="Minimalist Watch" width="200" height="200">
+    </div>
+    <h3>Minimalist Series</h3>
+    <p>$259</p>
+    <button onclick="addToCart('Minimalist Series', 259)" class="buy-button">Add to Cart</button>
+  </div>
+</div>
       </section>
     </main>
 
